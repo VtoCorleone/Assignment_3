@@ -1,0 +1,14 @@
+{
+  "name": "Assignment_3",
+  "version": "0.0.1",
+  "main": "index.html",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "~1.2.15",
+    "moment": "~2.5.1"
+  }
+}
