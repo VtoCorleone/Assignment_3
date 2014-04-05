@@ -1,0 +1,49 @@
+<div ng-controller="scBrowseCtrl">
+
+    <section class="filterContainer left">
+        <ul>
+            <lh>Vendor</lh>
+            <li>Robert August</li>
+            <li>Lost</li>
+            <li>Rusty</li>
+            <li>Firewire</li>
+        </ul>
+        <hr />
+        <ul>
+            <lh>Category</lh>
+            <li>Short board</li>
+            <li>Long board</li>
+            <li>Fish</li>
+            <li>Stand up</li>
+        </ul>
+        <hr />
+        <ul>
+            <lh>Price</lh>
+            <li>Short board</li>
+            <li>Long board</li>
+            <li>Fish</li>
+            <li>Stand up</li>
+        </ul>
+        <hr />
+    </section>
+
+    <section class="browseList">
+
+        <div ng-repeat="board in browse">
+            <div>
+                <label>Vendor:</label>
+                <span>{{board.vendor}}</span>
+            </div>
+            <div>
+                <label>Category:</label>
+                <span>{{board.category}}</span>
+            </div>
+            <div>
+                <label>Sku:</label>
+                <span>{{board.sku}}</span>
+            </div>
+        </div>
+
+    </section>
+
+</div>

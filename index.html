@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="scSurfShack">
 <head lang="en">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -50,74 +50,23 @@
 <body style="margin:0;">
 
     <div style="width:100%; height: 75px; background-color: lightgray;">
-
+        <a ui-sref="home">Surf Shack</a>
+        <a ui-sref="browse">Browse</a>
     </div>
 
     <div style="width:80%; min-width: 800px; margin-left: auto; margin-right: auto;">
 
-        <section class="filterContainer left">
-            <ul>
-                <lh>Vendor</lh>
-                <li>Robert August</li>
-                <li>Lost</li>
-                <li>Rusty</li>
-                <li>Firewire</li>
-            </ul>
-            <hr />
-            <ul>
-                <lh>Category</lh>
-                <li>Short board</li>
-                <li>Long board</li>
-                <li>Fish</li>
-                <li>Stand up</li>
-            </ul>
-            <hr />
-            <ul>
-                <lh>Price</lh>
-                <li>Short board</li>
-                <li>Long board</li>
-                <li>Fish</li>
-                <li>Stand up</li>
-            </ul>
-            <hr />
-        </section>
-
-        <section class="imageContainer left">
-            <img src="assets/xgs.png">
-        </section>
-
-        <section class="descriptionContainer left">
-            <div>
-                <span>Robert August</span>
-                <span class="right">$799</span>
-            </div>
-            <div>
-                <span>Bud Llamas XGS</span>
-                <div class="right" style="width:200px; text-align: right;">
-                    <span>11 in stock!</span>
-                    <span class="button">Add to <i class="fa fa-shopping-cart"></i></span>
-                </div>
-            </div>
-            <hr />
-            <div>
-                <label>Description:</label>
-                <span>Our state of the art, high performance Shortboard. It features a modern outline, single to triple concave, continuous bottom rocker with a crowned deck and pinched rails. Fast and loose with lots of drive. Features Futures removable fin system.</span>
-            </div>
-            <div>
-                <label>Features:</label>
-                <span>Stringers: Single redwood or optional multi-stringer or T-band.
-                    Glassing: Regular 6 oz. or optional 8 oz. Volan.
-                    Colors: Regular clear or 'XGS' airbrushed graphics. Optional opaque pigments, abstract swirls, resin tints or customer's own design.
-                    Fins: Futures fins standard. Glassed on fiberglass or inlaid wood fins available.</span>
-            </div>
-        </section>
-
+        <div ui-view></div>
 
     </div>
 
     <script src="libraries/angular/angular.min.js"></script>
     <script src="libraries/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="libraries/moment/min/moment.min.js"></script>
-    <!--<script src="/Assignment_3/app/scSurfShack.js"></script>-->
+
+    <script src="app/scSurfShackApp.js"></script>
+    <script src="app/home/scHomeCrtl.js"></script>
+    <script src="app/browse/scBrowseCtrl.js"></script>
+    <script src="app/sharedServices/scSurfboardSvc.js"></script>
 </body>
 </html>
