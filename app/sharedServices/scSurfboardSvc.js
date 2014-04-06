@@ -14,7 +14,7 @@
                 'category': 'Short Board',
                 'identifier': 'Bud Llamax XGS',
                 'price': 599,
-                'imageUrl': 'assets/xgs.png',
+                'imageUrl': 'assets/images/balsa.png',
                 'description': 'Our state of the art, high performance Shortboard. It features a modern outline, single to triple concave, continuous bottom rocker with a crowned deck and pinched rails. Fast and loose with lots of drive. Features Futures removable fin system.',
                 'features': 'Stringers: Single redwood or optional multi-stringer or T-band. Glassing: Regular 6 oz. or optional 8 oz. Volan. Colors: Regular clear or \'XGS\' airbrushed graphics. Optional opaque pigments, abstract swirls, resin tints or customer\'s own design. Fins: Futures fins standard. Glassed on fiberglass or inlaid wood fins available.'
             };

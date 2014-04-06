@@ -1,84 +1,117 @@
 <style>
     .showcase{
-        width: 50%;
-        height: 300px;
+        width: 75%;
         margin-right: auto;
         margin-left: auto;
-        background-color: lightyellow;
-    }
-    .topThree{
+        border: 1px solid lightgrey;
+        padding: 25px 25px 25px 25px;
 
+        background: -webkit-linear-gradient(#FFFFFF, #BBBBBB); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#FFFFFF, #BBBBBB); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#FFFFFF, #BBBBBB); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#FFFFFF, #BBBBBB); /* Standard syntax */
+    }
+    .featured{
+        width: 33%;
+        margin-top:35px;
+        text-align: center;
+
+    }
+
+    .featured header{
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 10px;
+    }
+
+    .featured.borderRight{
+        border-right: 1px solid #BBBBBB;
     }
 
 </style>
 
 <div  ng-controller="scShowcaseCtrl">
 
-    <div class="showcase">
-        <div>
-            <label>Vendor:</label>
-            <span>{{showcaseSurfboard.vendor}}</span>
+    <div class="showcase rounded">
+        <div class="left" style="width: 20%; text-align: right;">
+            <img ng-src="{{showcaseSurfboard.imageUrl}}" style="height: 400px; width: 84px" >
         </div>
-        <div>
-            <label>Category:</label>
-            <span>{{showcaseSurfboard.category}}</span>
+        <div class="left" style="width: 80%; text-align: center;">
+            <div style="text-align: center; font-size: 1.7em; margin-bottom: 25px;">
+                <span>{{showcaseSurfboard.vendor}} - {{showcaseSurfboard.identifier}}</span>
+            </div>
+            <div style="margin-bottom: 25px;">
+                <img ng-src="assets/images/robert_august_female_surfer.jpg" class="rounded" style="height: 275px; width: 412px;">
+            </div>
+            <div class="center" style="width: 70%">
+                <span>{{showcaseSurfboard.description}}</span>
+            </div>
         </div>
-        <div>
-            <label>Sku:</label>
-            <span>{{showcaseSurfboard.sku}}</span>
-        </div>
+        <div style="clear:both;"></div>
     </div>
 
-    <div>
+    <div style="width: 70%; margin-left: auto; margin-right: auto">
 
-        <div class="topThree left">
-            <div ng-repeat="board in topThree">
-                <div>
-                    <label>Vendor:</label>
-                    <span>{{board.vendor}}</span>
+        <div class="featured left borderRight">
+            <header>Featured Short Boards</header>
+            <div ng-repeat="board in topThree" style="margin:15px 15px 15px 15px;">
+                <div class="left" style="width: 50%">
+                    <div>
+                        <span>{{board.vendor}}</span>
+                    </div>
+                    <div>
+                        <span>{{board.category}}</span>
+                    </div>
+                    <div>
+                        <span>{{board.sku}}</span>
+                    </div>
                 </div>
-                <div>
-                    <label>Category:</label>
-                    <span>{{board.category}}</span>
+                <div class="left" style="width:50%">
+                    <img ng-src="assets/images/caddi-deck.png" class="rounded" style="height:75px; width: 25px;">
                 </div>
-                <div>
-                    <label>Sku:</label>
-                    <span>{{board.sku}}</span>
-                </div>
+                <div class="clear"></div>
             </div>
         </div>
 
-        <div class="topThree left">
-            <div ng-repeat="board in topThree">
-                <div>
-                    <label>Vendor:</label>
-                    <span>{{board.vendor}}</span>
+        <div class="featured left borderRight">
+            <header>Featured Short Boards</header>
+            <div ng-repeat="board in topThree" style="margin:15px 15px 15px 15px;">
+                <div class="left" style="width: 50%">
+                    <div>
+                        <span>{{board.vendor}}</span>
+                    </div>
+                    <div>
+                        <span>{{board.category}}</span>
+                    </div>
+                    <div>
+                        <span>{{board.sku}}</span>
+                    </div>
                 </div>
-                <div>
-                    <label>Category:</label>
-                    <span>{{board.category}}</span>
+                <div class="left" style="width:50%">
+                    <img ng-src="assets/images/caddi-deck.png" class="rounded" style="height:75px; width: 25px;">
                 </div>
-                <div>
-                    <label>Sku:</label>
-                    <span>{{board.sku}}</span>
-                </div>
+                <div class="clear"></div>
             </div>
         </div>
 
-        <div class="topThree left">
-            <div ng-repeat="board in topThree">
-                <div>
-                    <label>Vendor:</label>
-                    <span>{{board.vendor}}</span>
+        <div class="featured left">
+            <header>Featured Short Boards</header>
+            <div ng-repeat="board in topThree" style="margin:15px 15px 15px 15px;">
+                <div class="left" style="width: 50%">
+                    <div>
+                        <span>{{board.vendor}}</span>
+                    </div>
+                    <div>
+                        <span>{{board.category}}</span>
+                    </div>
+                    <div>
+                        <span>{{board.sku}}</span>
+                    </div>
                 </div>
-                <div>
-                    <label>Category:</label>
-                    <span>{{board.category}}</span>
+                <div class="left" style="width:50%">
+                    <img ng-src="assets/images/caddi-deck.png" class="rounded" style="height:75px; width: 25px;">
                 </div>
-                <div>
-                    <label>Sku:</label>
-                    <span>{{board.sku}}</span>
-                </div>
+                <div class="clear"></div>
             </div>
         </div>
 

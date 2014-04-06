@@ -11,6 +11,21 @@
         .right{
             float: right;
         }
+        .rounded{
+            border-radius: 25px;
+        }
+        .center{
+            margin-left: auto;
+            margin-right:auto;
+        }
+        .clear{
+            clear: both;
+        }
+        .display{
+            min-width: 1000px;
+            width: 80%;
+            height: 100%;
+        }
         .filterContainer{
             min-width: 200px;
             width: 20%;
@@ -20,7 +35,7 @@
             list-style-type: none;
             padding: 0;
         }
-        .filterContainer lh{
+        .filterContainer span{
             font-weight: bold;
             text-decoration: underline;
         }
@@ -39,6 +54,10 @@
             min-width: 200px;
             width: 60%;
         }
+        .contentContainer{
+            min-width: 800px;
+            width: 80%;
+        }
         .button{
             border: 1px solid black;
             padding:0 10px 0 10px;
@@ -49,15 +68,49 @@
 </head>
 <body style="margin:0;">
 
-    <div style="width:100%; height: 75px; background-color: lightgray;">
+    <div style="width:100%; height: 45px; background-color: #DDDDDD; margin-bottom: 35px;">
         <a ui-sref="home">Surf Shack</a>
         <a ui-sref="browse">Browse</a>
+        <div style="margin:6px 25px 0 0; background-color: #FFFFFF; padding: 0 20px 0 20px; color: #AAAAAA;" class="rounded right">
+            <i class="fa fa-shopping-cart fa-2x"></i>
+            &nbsp1
+        </div>
     </div>
 
-    <div style="width:80%; min-width: 800px; margin-left: auto; margin-right: auto;">
+    <div class="display center">
+        <div>
+            <section class="filterContainer left">
+                <span>Vendor</span>
+                <ul>
+                    <li>Robert August</li>
+                    <li>Lost</li>
+                    <li>Rusty</li>
+                    <li>Firewire</li>
+                </ul>
+                <hr />
+                <span>Category</span>
+                <ul>
+                    <li>Short board</li>
+                    <li>Long board</li>
+                    <li>Fish</li>
+                    <li>Stand up</li>
+                </ul>
+                <hr />
+                <span>Price</span>
+                <ul>
+                    <li>Short board</li>
+                    <li>Long board</li>
+                    <li>Fish</li>
+                    <li>Stand up</li>
+                </ul>
+                <hr />
+            </section>
 
-        <div ui-view></div>
+            <section class="contentContainer left">
+                <div ui-view></div>
+            </section>
 
+        </div>
     </div>
 
     <script src="libraries/angular/angular.min.js"></script>
