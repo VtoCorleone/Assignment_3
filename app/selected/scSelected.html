@@ -1,0 +1,69 @@
+<style>
+    #selectedContainer{
+        width:80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .selectedImageContainer{
+        min-width: 200px;
+        width: 20%;
+        text-align: center;
+    }
+    .selectedDescriptionContainer{
+        min-width: 200px;
+        width: 60%;
+    }
+    .button{
+        border: 1px solid black;
+        padding:0 10px 0 10px;
+    }
+</style>
+
+<div id="selectedContainer">
+
+    <section class="selectedImageContainer left">
+        <img src="assets/images/balsa.png">
+    </section>
+
+    <section class="selectedDescriptionContainer left">
+        <div style="font-size: 1.5em;">
+            <span>Robert August</span>
+        </div>
+        <div style="font-size: 1.5em;">
+            <span style="text-align: left">Bud Llamas XGS</span>
+            <span style="text-align: right;" class="right">$799</span>
+        </div>
+        <div class="clear"></div>
+        <hr />
+        <div class="right" style="width:100%; text-align: right; font-size: 1.5em;">
+            <span>11 in stock!</span>
+            <br />
+            <span>Quantity:</span><input type="text" maxlength="2" style="width: 20px; margin: 0 10px 0 10px; position: relative; top: -3px;">
+            <span class="button rounded" ng-click="addToCart()">Add to <i class="fa fa-shopping-cart"></i></span>
+        </div>
+        <div class="clear"></div>
+        <div style="margin: 25px 0 15px 0; line-height: 2.5em;">
+            <div>
+                <div style="width: 15%; text-align: right; font-weight: bold;" class="left">
+                    <label style="width: 100px; text-align: right;">Description:</label>
+                </div>
+                <div style="width: 85%;" class="left">
+                    <span style="padding:0 15px 0 15px; display: block;">Our state of the art, high performance Shortboard. It features a modern outline, single to triple concave, continuous bottom rocker with a crowned deck and pinched rails. Fast and loose with lots of drive. Features Futures removable fin system.</span>
+                </div>
+            </div>
+            <div>
+                <div style="width: 15%; text-align: right; font-weight: bold;" class="left">
+                    <label style="width: 100px; text-align: right;">Features:</label>
+                </div>
+                <div style="width: 85%;" class="left">
+                    <span style="padding:0 15px 0 15px; display: block;">Stringers: Single redwood or optional multi-stringer or T-band.
+                        Glassing: Regular 6 oz. or optional 8 oz. Volan.
+                        Colors: Regular clear or 'XGS' airbrushed graphics. Optional opaque pigments, abstract swirls, resin tints or customer's own design.
+                        Fins: Futures fins standard. Glassed on fiberglass or inlaid wood fins available.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

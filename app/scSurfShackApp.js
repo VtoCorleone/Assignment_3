@@ -9,19 +9,20 @@
     .config(function($stateProvider, $urlRouterProvider){
 
         // For any unmatched url, redirect to /state1
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("/showcase");
 
         // Now set up states
         $stateProvider
-            .state('home', {
-                url:'/home',
-                templateUrl:'app/home/scHome.html'
+            .state('showcase', {
+                url: '/showcase',
+                templateUrl: 'app/showcase/scShowcase.html'
             })
 
-            .state('browse', {
-                url:'/browse',
-                templateUrl:'app/browse/scBrowse.html'
-            })
+//            .state('browse', {
+//                url: '/browse',
+//                templateUrl: 'app/browse/scBrowse.html',
+//                controller: 'scBrowseCtrl'
+//            })
 
     });
 

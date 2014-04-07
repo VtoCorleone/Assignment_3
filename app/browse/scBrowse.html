@@ -1,35 +1,42 @@
-<div ng-controller="scBrowseCtrl">
+<style>
+    #browseContainer .browseItem{
+        border: 1px solid #EEEEEE;
+        width:48%;
+        margin: 15px 0 15px 0;
+    }
+    #browseContainer .browseDescription{
+        width: 75%;
+        line-height: 1.5em;
+        /*padding: 10px 10px 10px 10px;*/
+    }
+    #browseContainer .browseImageContainer{
+        width: 25%;
+        text-align: center;
+    }
+    #browseContainer .browseImage{
+        width: 50px;
+        height: 180px;
+    }
+    #browseContainer label{
+        min-width: 70px;
+        text-align: right;
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+</style>
 
-    <section class="filterContainer left">
-        <ul>
-            <lh>Vendor</lh>
-            <li>Robert August</li>
-            <li>Lost</li>
-            <li>Rusty</li>
-            <li>Firewire</li>
-        </ul>
-        <hr />
-        <ul>
-            <lh>Category</lh>
-            <li>Short board</li>
-            <li>Long board</li>
-            <li>Fish</li>
-            <li>Stand up</li>
-        </ul>
-        <hr />
-        <ul>
-            <lh>Price</lh>
-            <li>Short board</li>
-            <li>Long board</li>
-            <li>Fish</li>
-            <li>Stand up</li>
-        </ul>
-        <hr />
-    </section>
-
-    <section class="browseList">
-
-        <div ng-repeat="board in browse">
+<div id="browseContainer">
+    <h1>
+        <span>Filtered by: {{filteredBy}}</span>
+    </h1>
+    <div ng-repeat="board in browse" class="browseItem left rounded">
+        <div class="browseImageContainer left">
+            <a ui-sref="surfboard({sku:board.sku})">
+                <img ng-src="{{board.imageUrl}}" class="browseImage">
+            </a>
+        </div>
+        <div class="browseDescription left">
             <div>
                 <label>Vendor:</label>
                 <span>{{board.vendor}}</span>
@@ -39,11 +46,18 @@
                 <span>{{board.category}}</span>
             </div>
             <div>
-                <label>Sku:</label>
-                <span>{{board.sku}}</span>
+                <label>Model:</label>
+                <span>{{board.identifier}}</span>
+            </div>
+            <div>
+                <label>Price:</label>
+                <span>{{board.price}}</span>
+            </div>
+            <div>
+                <label>Description:</label>
+                <span>{{board.description}}</span>
             </div>
         </div>
-
-    </section>
+    </div>
 
 </div>

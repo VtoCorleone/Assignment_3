@@ -45,35 +45,21 @@
         .filterContainer hr{
             width: 200px;
         }
-        .imageContainer{
-            min-width: 200px;
-            width: 20%;
-            text-align: center;
-        }
-        .descriptionContainer{
-            min-width: 200px;
-            width: 60%;
-        }
+
         .contentContainer{
             min-width: 800px;
             width: 80%;
         }
-        .button{
-            border: 1px solid black;
-            padding:0 10px 0 10px;
-        }
-
-
     </style>
 </head>
 <body style="margin:0;">
 
-    <div style="width:100%; height: 45px; background-color: #DDDDDD; margin-bottom: 35px;">
+    <div style="width:100%; height: 45px; background-color: #DDDDDD; margin-bottom: 35px;" ng-controller="scNavCtrl">
         <a ui-sref="home">Surf Shack</a>
         <a ui-sref="browse">Browse</a>
         <div style="margin:6px 25px 0 0; background-color: #FFFFFF; padding: 0 20px 0 20px; color: #AAAAAA;" class="rounded right">
             <i class="fa fa-shopping-cart fa-2x"></i>
-            &nbsp1
+            &nbsp{{itemsInCart}}
         </div>
     </div>
 
@@ -82,7 +68,7 @@
             <section class="filterContainer left">
                 <span>Vendor</span>
                 <ul>
-                    <li>Robert August</li>
+                    <li><a ui-sref="browse/vendor({vendorId:5})">Robert August</a></li>
                     <li>Lost</li>
                     <li>Rusty</li>
                     <li>Firewire</li>
@@ -90,7 +76,7 @@
                 <hr />
                 <span>Category</span>
                 <ul>
-                    <li>Short board</li>
+                    <li><a ui-sref="browse/category({categoryId:9})">Short Board</a></li>
                     <li>Long board</li>
                     <li>Fish</li>
                     <li>Stand up</li>
@@ -118,8 +104,11 @@
     <script src="libraries/moment/min/moment.min.js"></script>
 
     <script src="app/scSurfShackApp.js"></script>
-    <script src="app/home/scHomeCrtl.js"></script>
-    <script src="app/browse/scBrowseCtrl.js"></script>
+    <script src="app/nav/scNavCtrl.js"></script>
+    <script src="app/cart/scCartSvc.js"></script>
+    <script src="app/showcase/scShowcaseCtrl.js"></script>
+    <script src="app/browse/scBrowse.js"></script>
+    <script src="app/selected/scSelected.js"></script>
     <script src="app/sharedServices/scSurfboardSvc.js"></script>
 </body>
 </html>

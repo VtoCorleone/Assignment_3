@@ -43,10 +43,41 @@
             return boards;
         };
 
+        var getByVendor = function(vendorId){
+            var boards = [];
+            for (var i = 0; i < 8; i++)
+                boards.push(templateBoard(i));
+
+            return boards;
+        };
+
+        var getByCategory = function(categoryId){
+            var boards = [];
+            for (var i = 0; i < 8; i++)
+                boards.push(templateBoard(i));
+
+            return boards;
+        };
+
+        var getByPrice = function(low, high){
+            var boards = [];
+            for (var i = 0; i < 8; i++)
+                boards.push(templateBoard(i));
+
+            return boards;
+        };
+
+        var getBySku = function(sku){
+            return templateBoard(1);
+        };
+
         return{
             getShowcase: getShowcase,
             getAll: getAll,
-            getTopThree: getTopThree
+            getTopThree: getTopThree,
+            getByVendor: getByVendor,
+            getByCategory: getByCategory,
+            getBySku: getBySku
         };
 
     }]);
