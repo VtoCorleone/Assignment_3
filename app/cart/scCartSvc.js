@@ -2,25 +2,60 @@
 
 (function(){
 
-    angular.module('scSurfShack').factory('scCartSvc', ['$http', '$q', function($http, $q){
+    angular.module('scSurfShack').factory('scCartSvc', ['$http', '$q', '$cookieStore', function($http, $q, $cookieStore){
 
-        var numberOfItems = 0;
+        var merchandise = [];
 
-        var totalCost = 0;
+        var getSurfCartCookie = function(){
+            var cookie = $cookieStore.get('SurfCart');
+            merchandise = (cookie === undefined) ? [] : angular.fromJson(cookie);
+        }
+
+        var setSurfCartCookie = function(){
+            $cookieStore.put('SurfCart', angular.toJson(merchandise));
+        }
+
+        var getAll = function(){
+            getSurfCartCookie();
+            return merchandise;
+        }
 
         var getNumberOfItems = function(){
-            return numberOfItems;
+            getSurfCartCookie();
+            var numItems = 0;
+            _(merchandise).forEach(function(merch){
+                numItems += merch.quantity;
+            });
+            return numItems;
+        }
+
+        var getTotalAmount = function(){
+            getSurfCartCookie();
+            var amount = 0;
+            _(merchandise).forEach(function (merch) {
+                amount += (merch.surfboard.price * merch.quantity);
+            });
+            return amount;
         }
 
         var addItems = function(surfboard, quantity){
-            numberOfItems += quantity;
-            totalCost += (surfboard.price * quantity);
+            merchandise.push({'surfboard': surfboard, 'quantity': quantity});
+            setSurfCartCookie();
+        }
+
+        var removeItems = function(sku, quantity){
+            getSurfCartCookie();
+            _(merchandise).forEach(function(board){
+
+            });
         }
 
         return {
+            getAll: getAll,
             getNumberOfItems: getNumberOfItems,
-            totalCost: totalCost,
-            addItems: addItems
+            getTotalAmount: getTotalAmount,
+            addItems: addItems,
+            removeItems: removeItems
         };
 
     }]);

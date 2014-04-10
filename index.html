@@ -58,8 +58,10 @@
         <a ui-sref="home">Surf Shack</a>
         <a ui-sref="browse">Browse</a>
         <div style="margin:6px 25px 0 0; background-color: #FFFFFF; padding: 0 20px 0 20px; color: #AAAAAA;" class="rounded right">
-            <i class="fa fa-shopping-cart fa-2x"></i>
-            &nbsp{{itemsInCart}}
+            <a ui-sref="cart">
+                <i class="fa fa-shopping-cart fa-2x"></i>
+                &nbsp{{itemsInCart}}
+            </a>
         </div>
     </div>
 
@@ -99,12 +101,17 @@
         </div>
     </div>
 
+    <!--JavaScript libraries-->
     <script src="libraries/angular/angular.min.js"></script>
     <script src="libraries/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="libraries/angular-cookies/angular-cookies.min.js"></script>
     <script src="libraries/moment/min/moment.min.js"></script>
+    <script src="libraries/lodash/dist/lodash.min.js"></script>
 
+    <!--App specific JavaScript files-->
     <script src="app/scSurfShackApp.js"></script>
     <script src="app/nav/scNavCtrl.js"></script>
+    <script src="app/cart/scCart.js"></script>
     <script src="app/cart/scCartSvc.js"></script>
     <script src="app/showcase/scShowcaseCtrl.js"></script>
     <script src="app/browse/scBrowse.js"></script>

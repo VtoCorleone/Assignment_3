@@ -23,7 +23,6 @@
                     url: '/browse/category/{categoryId:[0-9]{1,4}}',
                     templateUrl: 'app/browse/scBrowse.html',
                     controller: ['$scope', '$stateParams', 'scSurfboardSvc', function($scope, $stateParams, scSurfboardSvc){
-                        debugger;
                         $scope.browse = scSurfboardSvc.getAll();
                         $scope.filteredBy = 'Category';
 

@@ -15,9 +15,10 @@
 
                         $scope.browse = scSurfboardSvc.getAll();
 
-                        $scope.addToCart = function(){
+                        $scope.quantity = 0;
 
-                            scCartSvc.addItems(scSurfboardSvc.getShowcase(1), 3);
+                        $scope.addToCart = function(){
+                            scCartSvc.addItems(scSurfboardSvc.getShowcase(1), +$scope.quantity);
                         }
 
                     }]

@@ -4,7 +4,7 @@
 
     angular
 
-    .module('scSurfShack', ['ui.router'])
+    .module('scSurfShack', ['ui.router', 'ngCookies'])
 
     .config(function($stateProvider, $urlRouterProvider){
 

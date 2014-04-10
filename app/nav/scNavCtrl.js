@@ -4,6 +4,7 @@
 
     angular.module('scSurfShack').controller('scNavCtrl', ['$scope', 'scCartSvc', function($scope, scCartSvc){
 
+        //Update the number of items in the cart
         $scope.$watch(
             function() {
                 return scCartSvc.getNumberOfItems();
@@ -14,6 +15,4 @@
         );
 
     }]);
-})();/**
- * Created by shanechapman on 4/6/14.
- */
+})();
