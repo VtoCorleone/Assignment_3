@@ -24,7 +24,17 @@
 
 
         var getShowcase = function(){
-            return templateBoard(1);
+            var deferred = $q.defer();
+
+            $http.get('/Assignment%203/mockData/surfboards.json')
+                .success(function(data){
+                    deferred.resolve(data[0]);
+                })
+                .error(function(reason){
+                    deferred.reject(reason);
+                });
+
+            return deferred.promise;
         };
 
         var getAll = function(){
@@ -35,12 +45,20 @@
             return boards;
         };
 
-        var getTopThree = function(){
-            var boards = [];
-            for (var i = 0; i < 3; i++)
-                boards.push(templateBoard(i));
+        var getTopThree = function(type){
+            var deferred = $q.defer();
 
-            return boards;
+            $http.get('/Assignment%203/mockData/surfboards.json')
+                .success(function(data){
+                    var three = _.where(data, {'category': type});
+
+                    deferred.resolve(three);
+                })
+                .error(function(reason){
+                    deferred.reject(reason);
+                });
+
+            return deferred.promise;
         };
 
         var getByVendor = function(vendorId){

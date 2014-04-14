@@ -1,0 +1,171 @@
+[
+{
+    "sku":"BFY-856",
+    "identifier":"Bud Llamas XGS",
+    "description":"Our state of the art, high performance Shortboard. It features a modern outline, single to triple concave, continuous bottom rocker with a crowned deck and pinched rails. Fast and loose with lots of drive. Features Futures removable fin system.",
+    "imageuri":"xgs.png",
+    "vendor":"Robert August",
+    "category":"Short Board",
+    "price":"400",
+    "features":"Length Range: 5'6 to 7'6\" Width: 17\" to 21\" Nose: 11\" to 14\" Tail: 13\" to 16\""
+},
+{
+    "sku":"FPD-506",
+    "identifier":"Pile Driver",
+    "description":"The PILE DRIVER is an extension of the \"Driver\" series. Emerging from feedback on the very popular \"Mini Driver\", the PILE DRIVER is a reaction to wanting a bit more out of the Mini Driver in smaller, or softer surf. Essentially the same board in rocker, foil and outline, the main change is an extension of the tail outline into a subtle double bump swallow. The extended rail line of a swallow tail adds drive and also brings more width and surface area in the tail. More surface area = more lift, which means more fun in small to medium surf.",
+    "imageuri":"pile-driver_boards.png",
+    "vendor":"Firewire",
+    "category":"Short Board",
+    "price":"475",
+    "features":"LENGTH: 5' 6\" WIDTH: 18 3/4\" THICKNESS: 2 1/4\" TAIL: swallow VOLUME: 25.1"
+},
+{
+    "sku":"FQF-510",
+    "identifier":"Quadra-5",
+    "description":"The QUADRA-5 Series combines the control of an Alternator thruster with the top end speed of a twin fin. We've pushed the wide point back slightly to create a fuller tail, while still maintaining an even curve throughout. Combined with FUTURE SHAPES TECHNOLOGY, the result is an extremely fast, loose surfboard, capable of handling a variety of conditions. For the next year we've added a rear center fin option, hence the name change from QUADRAFLEX to QUADRA-5.",
+    "imageuri":"quadra-5_boards.png",
+    "vendor":"Firewire",
+    "category":"Short Board",
+    "price":"900",
+    "features":"LENGTH: 5' 10\" WIDTH: 19\" THICKNESS: 2 1/4\" TAIL: swallow VOLUME: 25.2"}
+,
+{
+    "sku":"QPS-254",
+    "identifier":"GTR",
+    "description":"BIO: The GT is your go-to board for \"between\" swells, i.e. average, everyday surf. Back foot oriented surfers will enjoy the lift, drive and skate of this small wave machine. SPECIFICATIONS: Deep single concave between the feet running into a slight vee flaring off the corners, helping add rail arc and complete turns. Average entry rocker, plenty of curve on the rail for tighter arcs, finished with relatively flat tail rocker. The GT's tail is a little wider than average, with volume shifted back. Ride 1-3\" shorter than your standard shortboard.",
+    "imageuri":"gtr-front.png",
+    "vendor":"Rusty",
+    "category":"Short Board",
+    "price":"760",
+    "features":"TAIL: The GTR is also available as Round tail, Squash tail or a Swallow FINS: Thruster or Quad GOOD FOR: On a dime surfing in fast breaking waves MATERIAL: EPS or PU WAVE SIZE: 2-6' SKILL LEVEL: Intermediate-Advanced"
+},
+{
+    "sku":"AFE-645",
+    "identifier":"Endless Summer Classic",
+    "description":"Endless Summer Classic Model 1963 Surfboard Exactly like the board Robert rode around the world in Bruce Brown's \"The Endless Summer\". Each limited edition surfboard (of 300) features, opaque white pigment, glassed on, 1963 style skag, and a classic 60's glass job, including  1\" redwood stringer and tail block. Includes numbered certificate of authenticity signed by Robert August. Size: 10'0 only.",
+    "imageuri":"es.png",
+    "vendor":"Robert August",
+    "category":"Long Board",
+    "price":"1200",
+    "features":"Length Range: 10'0\" Width: 24 Nose: 17 Tail: 15"
+},
+{
+    "sku":"BET-067",
+    "identifier":"Mini Tanker",
+    "description":"BIO: As the name implies, the Mini Tanker is a shorter version of the longboard. It?s an easy to manage, shorter longboard for lighter surfers. Also a good go-to, user friendly design for inexperienced surfers. SPECIFICATIONS:?Flat bottom with light vee in back third of the board. Full nose and relaxed rocker.",
+    "imageuri":"mini_tanker-front.png",
+    "vendor":"Rusty",
+    "category":"Long Board",
+    "price":"1400",
+    "features":"TAIL: Squash FINS: Single, Thruster, or 2+1 GOOD FOR: Learning MATERIAL: EPS or PU WAVE SIZE: 1-4' SKILL LEVEL: Beginner"
+},
+{
+    "sku":"ERT-410",
+    "identifier":"The Waterhog",
+    "description":"A good wave catcher, this mini-longboard bridges the gap between the performance oriented M-13 hybrid model and our longboard line. Low entry rocker for trimming and enough tail rocker to stay high performance. Bottom goes from flat entry with concave, to vee out the tail. Al suggests riding this as a thruster, available from 7'0\" to 8'11\". Can also be ordered as a single box with side biters.",
+    "imageuri":"water-hog-280x800.jpg",
+    "vendor":"Channel Islands",
+    "category":"Long Board",
+    "price":"1700",
+    "features":"Length: 8'11\" Width: 24\""
+},
+{
+    "sku":"TSM-901",
+    "identifier":"Submoon",
+    "description":"The SUBMOON is the ultimate FUNshape. Designer Nev Hyman explains: \"We combined a contemporary rocker and concaves and even thickness distribution with a quirky FUNshape outline that encourages a more vertical shortboard approach to the traditional longboard style of surfing. The outline has generous curve between your feet, which encourages the board to get on rail and TURN! The narrower moon tail provides bite, drive and direction, and the snub nose carries area forward for a bit of tip hang-cheater five FUN.\"",
+    "imageuri":"submoon_boards.png",
+    "vendor":"Firewire",
+    "category":"Long Board",
+    "price":"1700",
+    "features":"LENGTH: 9'5\" WIDTH: 23 7/8\" THICKNESS: 3 1/2\" TAIL: numoon VOLUME: 83.1"
+},
+{
+    "sku":"WFE-234",
+    "identifier":"RA Balsa",
+    "description":"This hand crafted authentic Balsa Wood Surf Board is shaped from a High Quality 'Shark Bay' Balsa Wood Blanks from Ecuador. Each board expertly hand crafted by internationally known shaper 'Mike Minchinton', we want this board to be your dream board. Call us if you have any special requests or questions!! With a limited run of 100 signed by Robert to you, this surfboard is destined to be a collectors item. Comes with beautiful glass-on Velzy template fin or 'rake' fin (as shown), and multi-layered wood tail block. (Nose Block is available-call for pricing) The Ultimate Ride and Wall Hanger. ",
+    "imageuri":"balsa.png",
+    "vendor":"Robert August",
+    "category":"Long Board",
+    "price":"2700",
+    "features":"Length Range: 9'0\" to 9'8\" Width: 23\" Nose: 18\" Tail: 15\" "
+},
+{
+    "sku":"WPB-253",
+    "identifier":"El Dorado",
+    "description":"The El Dorado is our all around performance longboard that has evolved from years of rider feedback. The board allows you to set it on rail and turn, trim and ride the nose or just catch anything. The bottom has a slight concave in the nose, flat through the midsection, ultimately blending into a flat panel vee. Blending its classic longboard rocker with modern rails gives you the ability to explore new lines with confidence and style. If you are looking for control with versatility, this is the board.",
+    "imageuri":"eldorado_front.jpg",
+    "vendor":"Rusty",
+    "category":"Long Board",
+    "price":"550",
+    "features":"TAIL: Squash, Round FINS: Single, Thruster, Quad, or 2+1 GOOD FOR: versatile longboarding MATERIAL: EPS or PU WAVE SIZE: 1-5' SKILL LEVEL: Intermediate-Advanced"
+},
+{
+    "sku":"XFF-800",
+    "identifier":"Flex Flight",
+    "description":"FLEXFLIGHTS are true high performance longboards, incorporating the increased dampening and squirt through turns as a result of CROSSFIRE Technology's flex characteristics; which eliminate the chatter of a longer board while increasing overall speed, never mind the 30% weight saving and increased strength over regular \"PU\".",
+    "imageuri":"flexflight_boards.png",
+    "vendor":"Firewire",
+    "category":"Long Board",
+    "price":"1300",
+    "features":"LENGTH: 8' WIDTH: 21 1/4\" THICKNESS: 2 3/4\" TAIL: squash VOLUME: 49.8"
+},
+{
+    "sku":"CPQ-013",
+    "identifier":"The \"R.V.\"",
+    "description":"The latest in our quest for the ultimate \"Domesticated\" design. The RV is exactly as its name implies?A \"Recreational Vehicle\". Designed for extracting maximum fun with minimum effort and ease of exploitation of your precious free time.... If you want to cruise the coast in style and comfort, surf in a resplendent state of wave catching excess and bliss, then the R.V. is for you. The design stems from a blend of the Bottom Feeder/Couch Potato/LayZboy genre. Featuring the same \"tip to tip\" vee bottom as its predecessors. The vee negates the substantial volume and allows easy rail to rail transitions on wide, thick boards with a lot of surface area.",
+    "imageuri":"rv-deck-250x675.png",
+    "vendor":"Lost",
+    "category":"Fish",
+    "price":"750",
+    "features":"Dimensions: 5'3\" x 20\" x 2.32\" Volume:27.78"
+},
+{
+    "sku":"F2A-500",
+    "identifier":"Double Agent",
+    "description":"Designer Dan Mann describes the DOUBLE AGENT: \"This design features a double barrel concave running from nose to tail. We introduced the same 'double barrel through the fins' on the Sweet Potato, Baked Potato, and the Potatonator, and trusting that there can't be too much of a good thing, I went ahead and extended that feature all the way forward. This adds to the board's sensitivity under front foot loading.\"",
+    "imageuri":"double-agent_boards.png",
+    "vendor":"Firewire",
+    "category":"Fish",
+    "price":"675",
+    "features":"LENGTH: 5' WIDTH: 20 1/2\" THICKNESS: 2 1/8\" TAIL: round VOLUME: 21.9"
+},
+{
+    "sku":"TRY-645",
+    "identifier":"Bud Llamas Fishy Fish",
+    "description":"A voluptuous, blunt-nosed hybrid of a fish and shortboard. With a flat rocker and a perfect combination of drive and power, you can be \"that guy\" catching all the waves and busting gi-normous airs. Typically, 1 1/2\"-2\" wider and thicker than a standard shortboard, so order about 2\" shorter than your usual. Works great as a quad too.",
+    "imageuri":"fishyfish.png",
+    "vendor":"Robert August",
+    "category":"Fish",
+    "price":"400",
+    "features":"Length Range: 5'8\" to 6'8\" Width: 17\" to 21\" Nose: 11\" to 14\" Tail: 13\" to 16\""
+},
+{
+    "sku":"UPI-698",
+    "identifier":"Fish Quatro",
+    "description":"BIO: Opens up the performance window of the traditional fish while keeping the basic fish values, speed and floatation, intact. Four fins and a contemporary bottom give the board more vertical performance and tighter arcs. SPECIFICATIONS: This board is wider than the Mod Quad, but not quite as wide as the Classic Fish. The bottom is equipped with a slight single concave to a double concave with a V on the tail. This unique model is also available with a concave deck.",
+    "imageuri":"fish_quatro-front.png",
+    "vendor":"Rusty",
+    "category":"Fish",
+    "price":"725",
+    "features":"TAIL: Swallow FINS: Quad GOOD FOR: Surfing progressive while keeping it classy MATERIAL: EPS or PU WAVE SIZE: 1-5' SKILL LEVEL: Intermediate"
+},
+{
+    "sku":"VEU-406",
+    "identifier":"Cat Fish",
+    "description":"BIO: It's designed to be an everyday board. Everyday means average surf; most of the time it?s the stuff we ride in between \"real\" swells. Basically this is a 90% solution, meaning the board you will ride 90% of the time. SPECIFICATIONS: The Catfish has modern rails, a single concave through the midsection that blends into a light double barrel vee through the fins. The rocker is slightly relaxed compared to a \"high performance\" shortboard but by no means flat. In fact the profile closely resembles the shortboards of the late 80's.",
+    "imageuri":"cat_fish-front.png",
+    "vendor":"Rusty",
+    "category":"Fish",
+    "price":"650",
+    "features":"TAIL: Double wing swallow FINS: Thruster or Quad GOOD FOR: Shredding day to day surf MATERIAL: EPS or PU WAVE SIZE: 2-6' SKILL LEVEL: Intermediate to Advanced"
+},
+{
+    "sku":"PLI-092",
+    "identifier":"The Caddi",
+    "description":"Stand-Up Paddle Board is designed for good stability for open water paddling but still allows easy maneuverability in the surf. Comes standard as box + biters fin setup. Al has added rocker that enhances maneuverability but still allows a nice clean track while paddling and surfing. Standard dims in 9' to 12'. AL also incorporated a slight bump near the front fins to make it turn even quicker when you need to but not sacrificing stability. Comes standard with a Ci gore tex vent system which helps the foam breath when its hot out.",
+    "imageuri":"caddi-deck.jpg",
+    "vendor":"Channel Islands",
+    "category":"SUP",
+    "price":"600",
+    "features":"Length: 9'0\" Width: 30\""}
+]

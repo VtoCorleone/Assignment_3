@@ -34,7 +34,7 @@
 
     <div class="showcase rounded">
         <div class="left" style="width: 20%; text-align: right;">
-            <img ng-src="{{showcaseSurfboard.imageUrl}}" style="height: 400px; width: 84px" >
+            <img ng-src="assets/images/{{showcaseSurfboard.imageuri}}" style="height: 400px; width: 84px" >
         </div>
         <div class="left" style="width: 80%; text-align: center;">
             <div style="text-align: center; font-size: 1.7em; margin-bottom: 25px;">
@@ -54,7 +54,7 @@
 
         <div class="featured left borderRight">
             <header>Featured Short Boards</header>
-            <div ng-repeat="board in topThree" style="margin:15px 15px 15px 15px;">
+            <div ng-repeat="board in topThreeShortBoards | limitTo:3" style="margin:15px 15px 15px 15px;">
                 <div class="left" style="width: 50%">
                     <div>
                         <span>{{board.vendor}}</span>
@@ -74,8 +74,8 @@
         </div>
 
         <div class="featured left borderRight">
-            <header>Featured Short Boards</header>
-            <div ng-repeat="board in topThree" style="margin:15px 15px 15px 15px;">
+            <header>Featured Long Boards</header>
+            <div ng-repeat="board in topThreeLongBoards | limitTo:3" style="margin:15px 15px 15px 15px;">
                 <div class="left" style="width: 50%">
                     <div>
                         <span>{{board.vendor}}</span>
@@ -95,8 +95,8 @@
         </div>
 
         <div class="featured left">
-            <header>Featured Short Boards</header>
-            <div ng-repeat="board in topThree" style="margin:15px 15px 15px 15px;">
+            <header>Featured Fish Boards</header>
+            <div ng-repeat="board in topThreeFishBoards | limitTo:3" style="margin:15px 15px 15px 15px;">
                 <div class="left" style="width: 50%">
                     <div>
                         <span>{{board.vendor}}</span>

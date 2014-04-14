@@ -4,11 +4,43 @@
 
     angular.module('scSurfShack').controller('scShowcaseCtrl', ['$scope', 'scSurfboardSvc', 'scCartSvc', function($scope, scSurfboardSvc, scCartSvc){
 
-        $scope.showcaseSurfboard = scSurfboardSvc.getShowcase();
+        scSurfboardSvc.getShowcase().then(
+            function(data){
+                $scope.showcaseSurfboard = data;
+            },
+            function(reason){
+                // Error
+                console.log(reason);
+            }
+        );
 
-        $scope.topThree = scSurfboardSvc.getTopThree();
-
-        //$scope.itemsInCart = scCartSvc.getNumberOfItems();
+        scSurfboardSvc.getTopThree('Short Board').then(
+            function(data){
+                $scope.topThreeShortBoards = data;
+            },
+            function(reason){
+                // Error
+                console.log(reason);
+            }
+        );
+        scSurfboardSvc.getTopThree('Long Board').then(
+            function(data){
+                $scope.topThreeLongBoards = data;
+            },
+            function(reason){
+                // Error
+                console.log(reason);
+            }
+        );
+        scSurfboardSvc.getTopThree('Fish').then(
+            function(data){
+                $scope.topThreeFishBoards = data;
+            },
+            function(reason){
+                // Error
+                console.log(reason);
+            }
+        );
 
     }]);
 })();
