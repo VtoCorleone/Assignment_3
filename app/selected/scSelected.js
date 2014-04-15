@@ -17,8 +17,17 @@
 
                         $scope.quantity = 0;
 
-                        $scope.addToCart = function(){
-                            scCartSvc.addItems(scSurfboardSvc.getShowcase(1), +$scope.quantity);
+                        scSurfboardSvc.getBySku($stateParams.sku).then(
+                            function(data) {
+                                $scope.selectedBoard = data[0];
+                            },
+                            function(reason){
+                                // error
+                            }
+                        );
+
+                        $scope.addToCart = function(board){
+                            scCartSvc.addItems(board, +$scope.quantity);
                         }
 
                     }]

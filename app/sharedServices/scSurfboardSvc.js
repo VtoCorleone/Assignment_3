@@ -86,7 +86,18 @@
         };
 
         var getBySku = function(sku){
-            return templateBoard(1);
+            var deferred = $q.defer();
+
+            $http.get('/Assignment%203/mockData/surfboards.json')
+                .success(function(data){
+                    var board = _.where(data, {'sku': sku});
+                    deferred.resolve(board);
+                })
+                .error(function(reason){
+                    deferred.reject(reason);
+                });
+
+            return deferred.promise;
         };
 
         return{

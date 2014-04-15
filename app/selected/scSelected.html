@@ -22,16 +22,16 @@
 <div id="selectedContainer">
 
     <section class="selectedImageContainer left">
-        <img src="assets/images/balsa.png">
+        <img ng-src="{{selectedBoard.imageuri}}">
     </section>
 
     <section class="selectedDescriptionContainer left">
         <div style="font-size: 1.5em;">
-            <span>Robert August</span>
+            <span>{{selectedBoard.vendor}}</span>
         </div>
         <div style="font-size: 1.5em;">
-            <span style="text-align: left">Bud Llamas XGS</span>
-            <span style="text-align: right;" class="right">$799</span>
+            <span style="text-align: left">{{selectedBoard.identifier}}</span>
+            <span style="text-align: right;" class="right">${{selectedBoard.price}}</span>
         </div>
         <div class="clear"></div>
         <hr />
@@ -39,7 +39,7 @@
             <span>11 in stock!</span>
             <br />
             <span>Quantity:</span><input type="text" maxlength="2" ng-model="quantity" style="width: 20px; margin: 0 10px 0 10px; position: relative; top: -3px;">
-            <span class="button rounded" ng-click="addToCart()">Add to <i class="fa fa-shopping-cart"></i></span>
+            <span class="button rounded" ng-click="addToCart(selectedBoard)">Add to <i class="fa fa-shopping-cart"></i></span>
         </div>
         <div class="clear"></div>
         <div style="margin: 25px 0 15px 0; line-height: 2.5em;">
@@ -48,7 +48,7 @@
                     <label style="width: 100px; text-align: right;">Description:</label>
                 </div>
                 <div style="width: 85%;" class="left">
-                    <span style="padding:0 15px 0 15px; display: block;">Our state of the art, high performance Shortboard. It features a modern outline, single to triple concave, continuous bottom rocker with a crowned deck and pinched rails. Fast and loose with lots of drive. Features Futures removable fin system.</span>
+                    <span style="padding:0 15px 0 15px; display: block;">{{selectedBoard.description}}</span>
                 </div>
             </div>
             <div>
@@ -56,11 +56,7 @@
                     <label style="width: 100px; text-align: right;">Features:</label>
                 </div>
                 <div style="width: 85%;" class="left">
-                    <span style="padding:0 15px 0 15px; display: block;">Stringers: Single redwood or optional multi-stringer or T-band.
-                        Glassing: Regular 6 oz. or optional 8 oz. Volan.
-                        Colors: Regular clear or 'XGS' airbrushed graphics. Optional opaque pigments, abstract swirls, resin tints or customer's own design.
-                        Fins: Futures fins standard. Glassed on fiberglass or inlaid wood fins available.
-                    </span>
+                    <span style="padding:0 15px 0 15px; display: block;">{{selectedBoard.features}}</span>
                 </div>
             </div>
         </div>

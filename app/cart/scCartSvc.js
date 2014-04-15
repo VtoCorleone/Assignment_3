@@ -29,13 +29,22 @@
             return numItems;
         }
 
-        var getTotalAmount = function(){
+        var getMerchandiseTotal = function(){
             getSurfCartCookie();
             var amount = 0;
             _(merchandise).forEach(function (merch) {
                 amount += (merch.surfboard.price * merch.quantity);
             });
             return amount;
+        }
+
+        var getTotal = function(){
+            getSurfCartCookie();
+            var amount = 0;
+            _(merchandise).forEach(function (merch) {
+                amount += (merch.surfboard.price * merch.quantity);
+            });
+            return ((amount + 5) * .08) + (amount + 5);
         }
 
         var addItems = function(surfboard, quantity){
@@ -53,7 +62,8 @@
         return {
             getAll: getAll,
             getNumberOfItems: getNumberOfItems,
-            getTotalAmount: getTotalAmount,
+            getMerchandiseTotal: getMerchandiseTotal,
+            getTotal: getTotal,
             addItems: addItems,
             removeItems: removeItems
         };

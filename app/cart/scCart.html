@@ -1,8 +1,10 @@
 <div>
 
     <div ng-repeat="board in boards">
-
-        <div class="left" style="width: 50%">
+        <div class="left" style="width:10%; text-align: center">
+            <img ng-src={{board.surfboard.imageuri}} class="rounded" style="height:75px; width: 25px;">
+        </div>
+        <div class="left" style="width: 90%">
             <div>
                 <span>{{board.surfboard.vendor}}</span>
             </div>
@@ -13,20 +15,31 @@
                 <span>{{board.surfboard.sku}}</span>
             </div>
             <div>
-                <span>{{board.quantity}}</span>
+                <input ng-model="board.quantity" type="number" />
+                <span>Update</span>
+                <span>Delete</span>
             </div>
-        </div>
-        <div class="left" style="width:50%">
-            <img ng-src={{board.surfboard.imageUrl}} class="rounded" style="height:75px; width: 25px;">
         </div>
         <div class="clear"></div>
 
     </div>
 
     <hr/>
-
-    <span>Total:{{total}}</span>
-    <br/>
+    <div>
+        <span>Merchandise:${{merchTotal}}</span>
+    </div>
+    <div>
+        <span>Shipping: $5</span>
+    </div>
+    <div>
+        <span>Tax: 8%</span>
+    </div>
+    <div>
+        <span>Total: ${{total}}</span>
+    </div>
+    <div>
+        <span>Check Out</span>
+    </div>
 
 
 

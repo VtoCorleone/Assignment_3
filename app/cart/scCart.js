@@ -14,7 +14,8 @@
                     controller: ['$scope', '$stateParams', 'scCartSvc', function($scope, $stateParams, scCartSvc){
 
                         $scope.boards = scCartSvc.getAll();
-                        $scope.total = scCartSvc.getTotalAmount();
+                        $scope.merchTotal = scCartSvc.getMerchandiseTotal();
+                        $scope.total = scCartSvc.getTotal();
 
                     }]
                 })
