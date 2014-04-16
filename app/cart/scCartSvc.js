@@ -40,6 +40,9 @@
 
         var getTotal = function(){
             getSurfCartCookie();
+            if (merchandise.length === 0)
+                return 0;
+
             var amount = 0;
             _(merchandise).forEach(function (merch) {
                 amount += (merch.surfboard.price * merch.quantity);
@@ -52,11 +55,29 @@
             setSurfCartCookie();
         }
 
-        var removeItems = function(sku, quantity){
+        var updateItem = function(surfboard, quantity){
             getSurfCartCookie();
-            _(merchandise).forEach(function(board){
-
+            _(merchandise).forEach(function(merch){
+                if (merch.surfboard == surfboard) {
+                    merch.quantity = quantity;
+                    return;
+                }
             });
+            setSurfCartCookie();
+        }
+
+        var removeItem = function(sku){
+            var deferred = $q.defer();
+
+            getSurfCartCookie();
+            _.remove(merchandise, function(merch){
+                return merch.surfboard.sku == sku;
+            });
+            setSurfCartCookie();
+
+            deferred.resolve();
+            // Return the merchandise object to update the UI
+            return deferred.promise;
         }
 
         return {
@@ -65,7 +86,8 @@
             getMerchandiseTotal: getMerchandiseTotal,
             getTotal: getTotal,
             addItems: addItems,
-            removeItems: removeItems
+            updateItem: updateItem,
+            removeItem: removeItem
         };
 
     }]);

@@ -65,22 +65,16 @@
     </div>
 
     <div class="display center">
-        <div>
+        <div ng-controller="scFiltersCtrl">
             <section class="filterContainer left">
                 <span>Vendor</span>
                 <ul>
-                    <li><a ui-sref="browse/vendor({vendorId:5})">Robert August</a></li>
-                    <li>Lost</li>
-                    <li>Rusty</li>
-                    <li>Firewire</li>
+                    <li ng-repeat="vendor in vendors"><a ui-sref="browse/vendor({vendorId:vendor.vendor})">{{vendor.vendor}}</a></li>
                 </ul>
                 <hr />
                 <span>Category</span>
                 <ul>
-                    <li><a ui-sref="browse/category({categoryId:9})">Short Board</a></li>
-                    <li>Long board</li>
-                    <li>Fish</li>
-                    <li>Stand up</li>
+                    <li ng-repeat="category in categories"><a ui-sref="browse/category({categoryId:category.category})">{{category.category}}</a></li>
                 </ul>
                 <hr />
                 <span>Price</span>
@@ -116,5 +110,12 @@
     <script src="app/browse/scBrowse.js"></script>
     <script src="app/selected/scSelected.js"></script>
     <script src="app/sharedServices/scSurfboardSvc.js"></script>
+    <script src="app/filters/scFiltersCtrl.js"></script>
+    <script src="app/filters/scFiltersSvc.js"></script>
+    <script src="app/checkout/scCheckout.js"></script>
+    <script src="app/checkout/scCheckoutCtrl.js"></script>
+    <script src="app/checkout/scCheckoutSvc.js"></script>
+    <script src="app/confirmation/scConfirmation.js"></script>
+    <script src="app/confirmation/scConfirmationCtrl.js"></script>
 </body>
 </html>

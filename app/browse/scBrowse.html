@@ -33,29 +33,29 @@
     <div ng-repeat="board in browse" class="browseItem left rounded">
         <div class="browseImageContainer left">
             <a ui-sref="surfboard({sku:board.sku})">
-                <img ng-src="{{board.imageUrl}}" class="browseImage">
+                <img ng-src="{{board.imageuri}}" class="browseImage">
             </a>
         </div>
         <div class="browseDescription left">
             <div>
                 <label>Vendor:</label>
-                <span>{{board.vendor}}</span>
-            </div>
-            <div>
-                <label>Category:</label>
-                <span>{{board.category}}</span>
+                <span><a ui-sref="surfboard({sku:board.sku})">{{board.vendor}}</a></span>
             </div>
             <div>
                 <label>Model:</label>
                 <span>{{board.identifier}}</span>
             </div>
             <div>
-                <label>Price:</label>
-                <span>{{board.price}}</span>
+                <label>Category:</label>
+                <span>{{board.category}}</span>
             </div>
             <div>
-                <label>Description:</label>
-                <span>{{board.description}}</span>
+                <label>Price:</label>
+                <span>${{board.price}}</span>
+            </div>
+            <div>
+                <label>Stock:</label>
+                <span>More en route!</span>
             </div>
         </div>
     </div>

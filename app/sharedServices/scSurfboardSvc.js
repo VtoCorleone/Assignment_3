@@ -22,7 +22,6 @@
             return board;
         }
 
-
         var getShowcase = function(){
             var deferred = $q.defer();
 
@@ -62,19 +61,35 @@
         };
 
         var getByVendor = function(vendorId){
-            var boards = [];
-            for (var i = 0; i < 8; i++)
-                boards.push(templateBoard(i));
+            var deferred = $q.defer();
 
-            return boards;
+            $http.get('/Assignment%203/mockData/surfboards.json')
+                .success(function(data){
+                    var vendorBoards = _.where(data, {'vendor': vendorId});
+
+                    deferred.resolve(vendorBoards);
+                })
+                .error(function(reason){
+                    deferred.reject(reason);
+                });
+
+            return deferred.promise;
         };
 
         var getByCategory = function(categoryId){
-            var boards = [];
-            for (var i = 0; i < 8; i++)
-                boards.push(templateBoard(i));
+            var deferred = $q.defer();
 
-            return boards;
+            $http.get('/Assignment%203/mockData/surfboards.json')
+                .success(function(data){
+                    var categoryBoards = _.where(data, {'category': categoryId});
+
+                    deferred.resolve(categoryBoards);
+                })
+                .error(function(reason){
+                    deferred.reject(reason);
+                });
+
+            return deferred.promise;
         };
 
         var getByPrice = function(low, high){

@@ -9,21 +9,35 @@
             $stateProvider
 
                 .state('browse/vendor', {
-                    url: '/browse/vendor/{vendorId:[0-9]{1,4}}',
+                    url: '/browse/vendor/:vendorId',
                     templateUrl: 'app/browse/scBrowse.html',
                     controller: ['$scope', '$stateParams', 'scSurfboardSvc', function($scope, $stateParams, scSurfboardSvc){
 
-                        $scope.browse = scSurfboardSvc.getAll();
+                        scSurfboardSvc.getByVendor($stateParams.vendorId).then(
+                            function(data){
+                                $scope.browse = data;
+                            },
+                            function(reason){
+                                //error
+                            }
+                        )
                         $scope.filteredBy = 'Vendor';
 
                     }]
                 })
 
                 .state('browse/category', {
-                    url: '/browse/category/{categoryId:[0-9]{1,4}}',
+                    url: '/browse/category/:categoryId',
                     templateUrl: 'app/browse/scBrowse.html',
                     controller: ['$scope', '$stateParams', 'scSurfboardSvc', function($scope, $stateParams, scSurfboardSvc){
-                        $scope.browse = scSurfboardSvc.getAll();
+                        scSurfboardSvc.getByCategory($stateParams.categoryId).then(
+                            function(data){
+                                $scope.browse = data;
+                            },
+                            function(reason){
+                                //error
+                            }
+                        )
                         $scope.filteredBy = 'Category';
 
                     }]

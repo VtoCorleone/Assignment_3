@@ -16,6 +16,22 @@
                         $scope.boards = scCartSvc.getAll();
                         $scope.merchTotal = scCartSvc.getMerchandiseTotal();
                         $scope.total = scCartSvc.getTotal();
+                        $scope.update = function(board, quantity){
+                            if (quantity > 0)
+                                scCartSvc.update(board, quantity);
+                        };
+                        $scope.delete = function(board){
+                            scCartSvc.removeItem(board).then(
+                                function(){
+                                    $scope.boards = scCartSvc.getAll();
+                                    $scope.merchTotal = scCartSvc.getMerchandiseTotal();
+                                    $scope.total = scCartSvc.getTotal();
+                                },
+                                function(reason){
+                                    //error
+                                }
+                            );
+                        };
 
                     }]
                 })

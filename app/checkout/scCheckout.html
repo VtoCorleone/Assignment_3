@@ -1,0 +1,114 @@
+<style>
+    .creditCard{
+        margin-bottom: 25px;
+    }
+    .creditCard label{
+        width: 100px;
+        display: inline-block;
+    }
+    .billingInfo{
+
+    }
+    .billingInfo label{
+        width: 100px;
+        display: inline-block;
+    }
+    .shippingInfo{
+
+    }
+    .shippingInfo label{
+        width: 100px;
+        display: inline-block;
+    }
+</style>
+<div>
+    <form class="creditCard">
+        <header>Credit Card</header>
+        <div>
+            <label>CC Type:</label>
+            <input type="text" ng-model="ccType">
+        </div>
+        <div>
+            <label>CC Number:</label>
+            <input type="text" ng-model="ccNumber">
+        </div>
+        <div>
+            <label>Expiration Date:</label>
+            <input type="text" ng-model="ccExpiration">
+        </div>
+        <div>
+            <label>Security Code:</label>
+            <input type="text" ng-model="ccSecurity">
+        </div>
+    </form>
+    <form class="billingInfo left">
+        <header>Billing Info</header>
+        <div>
+            <label>Name:</label>
+            <input type="text" ng-model="billName">
+        </div>
+        <div>
+            <label>Address 1:</label>
+            <input type="text" ng-model="billAddress1">
+        </div>
+        <div>
+            <label>Address 2:</label>
+            <input type="text" ng-model="billAddress2">
+        </div>
+        <div>
+            <label>City:</label>
+            <input type="text" ng-model="billCity">
+        </div>
+        <div>
+            <label>State:</label>
+            <input type="text" ng-model="billState">
+        </div>
+        <div>
+            <label>Zip:</label>
+            <input type="text" ng-model="billZip">
+        </div>
+        <div>
+            <label>Phone:</label>
+            <input type="text" ng-model="billPhone">
+        </div>
+    </form>
+    <form class="shippingInfo">
+        <div>
+            <header class="left">Shipping Information</header>
+            <label>Same as billing: </label>
+            <input type="checkbox" ng-checked="isSameAsBilling" ng-click="sameAsBillingClicked()">
+        </div>
+        <div>
+            <label>Name:</label>
+            <input type="text" ng-model="shipName">
+        </div>
+        <div>
+            <label>Address 1:</label>
+            <input type="text" ng-model="shipAddress1">
+        </div>
+        <div>
+            <label>Address 2:</label>
+            <input type="text" ng-model="shipAddress2">
+        </div>
+        <div>
+            <label>City:</label>
+            <input type="text" ng-model="shipCity">
+        </div>
+        <div>
+            <label>State:</label>
+            <input type="text" ng-model="shipState">
+        </div>
+        <div>
+            <label>Zip:</label>
+            <input type="text" ng-model="shipZip">
+        </div>
+        <div>
+            <label>Phone:</label>
+            <input type="text" ng-model="shipPhone">
+        </div>
+    </form>
+</div>
+<hr />
+<div>
+
+</div>

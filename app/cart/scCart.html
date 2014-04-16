@@ -9,15 +9,15 @@
                 <span>{{board.surfboard.vendor}}</span>
             </div>
             <div>
+                <span>{{board.surfboard.identifier}}</span>
+            </div>
+            <div>
                 <span>{{board.surfboard.category}}</span>
             </div>
             <div>
-                <span>{{board.surfboard.sku}}</span>
-            </div>
-            <div>
                 <input ng-model="board.quantity" type="number" />
-                <span>Update</span>
-                <span>Delete</span>
+                <span ng-click="update(board, board.quantity)">Update</span>
+                <span ng-click="delete(board.surfboard.sku)">Delete</span>
             </div>
         </div>
         <div class="clear"></div>
@@ -38,7 +38,7 @@
         <span>Total: ${{total}}</span>
     </div>
     <div>
-        <span>Check Out</span>
+        <span><a ui-sref="checkout">Check Out</a></span>
     </div>
 
 
