@@ -47,6 +47,9 @@
 .required{
     color: red;
 }
+.inputRequired{
+    border: 1px solid red;
+}
 .button{
     border: 1px solid #3C8DC5;
     padding:0 10px 0 10px;

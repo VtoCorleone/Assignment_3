@@ -6,10 +6,14 @@
 
         $scope.isSameAsBilling = false;
 
-        $scope.isValidForm = false;
+        $scope.submitted = false;
 
         $scope.validateForm = function($event){
 
+            $scope.submitted = true;
+
+            if ($scope.checkout_form.$valid)
+                $state.go('confirmation');
 //         $scope.ccType
 //         $scope.ccName
 //         $scope.ccNumber
@@ -30,9 +34,9 @@
 //         $scope.shipZip
 //         $scope.shipPhone
 
-            if ($scope.isValidForm) {
-                $state.go('confirmation');
-            }
+//            if ($scope.isValidForm) {
+//                $state.go('confirmation');
+//            }
 
         };
 

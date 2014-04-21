@@ -91,8 +91,8 @@
             <span>${{total}}</span>
         </div>
     </div>
-    <span ng-controller="scButtonCtrl" ng-click="addToCart(selectedBoard)" ng-class="{button: buttonNormal, buttonHover: isButtonHover, buttonClick: isButtonClick}"
+    <span ng-controller="scButtonCtrl" ng-class="{button: buttonNormal, buttonHover: isButtonHover, buttonClick: isButtonClick}"
           ng-mouseenter="mouseEnter()" ng-mouseleave="mouseLeave()" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" class="right rounded btn">
-        <a ui-sref="checkout">Check Out</a>
+        <a ng-click="checkoutClicked()">Check Out</a>
     </span>
 </div>

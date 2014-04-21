@@ -46,6 +46,9 @@
         margin-top: 20px;
         width: 90px;
     }
+    input:invalid {
+        box-shadow: none;
+    }
 </style>
 <div id="checkoutContainer" class="center">
     <header>
@@ -53,113 +56,115 @@
             Checkout
         </h2>
     </header>
-    <form class="creditCard">
-        <div class="left">
-            <header>Credit Card</header>
+    <form name="checkout_form">
+        <div class="creditCard">
+            <div class="left">
+                <header>Credit Card</header>
+            </div>
+            <div class="left">
+                <div>
+                    <label>Type:</label>
+                    <input type="text" name="ccType" ng-model="ccType" required ng-class="{'inputRequired': checkout_form.ccType.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="ccName" ng-model="ccName" required ng-class="{'inputRequired': checkout_form.ccName.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>Number:</label>
+                    <input type="text" name="ccNumber" ng-model="ccNumber" required ng-class="{'inputRequired': checkout_form.ccNumber.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>Expiration:</label>
+                    <input type="text" name="ccExpiration" ng-model="ccExpiration" required ng-class="{'inputRequired': checkout_form.ccExpiration.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>CCV:</label>
+                    <input type="text" name="ccSecurity" ng-model="ccSecurity" required ng-class="{'inputRequired': checkout_form.ccSecurity.$invalid && submitted}">
+                </div>
+            </div>
         </div>
-        <div class="left">
-            <div>
-                <label>Type:</label>
-                <input type="text" ng-model="ccType">
+        <div class="clear"></div>
+        <div class="billingInfo">
+            <div class="left">
+                <header>Billing</header>
             </div>
-            <div>
-                <label>Name:</label>
-                <input type="text" ng-model="ccName">
-            </div>
-            <div>
-                <label>Number:</label>
-                <input type="text" ng-model="ccNumber">
-            </div>
-            <div>
-                <label>Expiration:</label>
-                <input type="text" ng-model="ccExpiration">
-            </div>
-            <div>
-                <label>CCV:</label>
-                <input type="text" ng-model="ccSecurity">
+            <div class="left">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="billName" ng-model="billName" required ng-class="{'inputRequired': checkout_form.billName.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>Address 1:</label>
+                    <input type="text" name="billAddress1" ng-model="billAddress1" required ng-class="{'inputRequired': checkout_form.billAddress1.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>Address 2:</label>
+                    <input type="text" name="billAddress2" ng-model="billAddress2" required ng-class="{'inputRequired': checkout_form.billAddress2.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>City:</label>
+                    <input type="text" name="billCity" ng-model="billCity" required ng-class="{'inputRequired': checkout_form.billCity.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>State:</label>
+                    <input type="text" name="billState" ng-model="billState" required ng-class="{'inputRequired': checkout_form.billState.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>Zip:</label>
+                    <input type="text" name="billZip" ng-model="billZip" required ng-class="{'inputRequired': checkout_form.billZip.$invalid && submitted}">
+                </div>
+                <div>
+                    <label>Phone:</label>
+                    <input type="text" name="billPhone" ng-model="billPhone" required ng-class="{'inputRequired': checkout_form.billPhone.$invalid && submitted}">
+                </div>
             </div>
         </div>
+        <div class="clear"></div>
+        <div>
+            <input type="checkbox" ng-checked="isSameAsBilling" ng-click="sameAsBillingClicked()">
+            <label>Shipping is same as billing</label>
+        </div>
+        <div class="shippingInfo">
+            <div class="left">
+                <header>Shipping</header>
+            </div>
+            <div class="left">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="shipName" ng-model="shipName" ng-disabled="isSameAsBilling" required ng-class="{'inputRequired': checkout_form.shipName.$invalid && submitted && !isSameAsBilling}">
+                </div>
+                <div>
+                    <label>Address 1:</label>
+                    <input type="text" name="shipAddress1" ng-model="shipAddress1" ng-disabled="isSameAsBilling" required ng-class="{'inputRequired': checkout_form.shipAddress1.$invalid && submitted && !isSameAsBilling}">
+                </div>
+                <div>
+                    <label>Address 2:</label>
+                    <input type="text" name="shipAddress2" ng-model="shipAddress2" ng-disabled="isSameAsBilling" required ng-class="{'inputRequired': checkout_form.shipAddress2.$invalid && submitted && !isSameAsBilling}">
+                </div>
+                <div>
+                    <label>City:</label>
+                    <input type="text" name="shipCity" ng-model="shipCity" ng-disabled="isSameAsBilling" required ng-class="{'inputRequired': checkout_form.shipCity.$invalid && submitted && !isSameAsBilling}">
+                </div>
+                <div>
+                    <label>State:</label>
+                    <input type="text" name="shipState" ng-model="shipState" ng-disabled="isSameAsBilling" required ng-class="{'inputRequired': checkout_form.shipState.$invalid && submitted && !isSameAsBilling}">
+                </div>
+                <div>
+                    <label>Zip:</label>
+                    <input type="text" name="shipZip" ng-model="shipZip" ng-disabled="isSameAsBilling" required ng-class="{'inputRequired': checkout_form.shipZip.$invalid && submitted && !isSameAsBilling}">
+                </div>
+                <div>
+                    <label>Phone:</label>
+                    <input type="text" name="shipPhone" ng-model="shipPhone" ng-disabled="isSameAsBilling" required ng-class="{'inputRequired': checkout_form.ccName.$invalid && submitted && !isSameAsBilling}">
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
     </form>
-    <div class="clear"></div>
-    <form class="billingInfo">
-        <div class="left">
-            <header>Billing</header>
-        </div>
-        <div class="left">
-            <div>
-                <label>Name:</label>
-                <input type="text" ng-model="billName">
-            </div>
-            <div>
-                <label>Address 1:</label>
-                <input type="text" ng-model="billAddress1">
-            </div>
-            <div>
-                <label>Address 2:</label>
-                <input type="text" ng-model="billAddress2">
-            </div>
-            <div>
-                <label>City:</label>
-                <input type="text" ng-model="billCity">
-            </div>
-            <div>
-                <label>State:</label>
-                <input type="text" ng-model="billState">
-            </div>
-            <div>
-                <label>Zip:</label>
-                <input type="text" ng-model="billZip">
-            </div>
-            <div>
-                <label>Phone:</label>
-                <input type="text" ng-model="billPhone">
-            </div>
-        </div>
-    </form>
-    <div class="clear"></div>
-    <div>
-        <input type="checkbox" ng-checked="isSameAsBilling" ng-click="sameAsBillingClicked()">
-        <label>Shipping is same as billing</label>
-    </div>
-    <form class="shippingInfo">
-        <div class="left">
-            <header>Shipping</header>
-        </div>
-        <div class="left">
-            <div>
-                <label>Name:</label>
-                <input type="text" ng-model="shipName" ng-disabled="isSameAsBilling">
-            </div>
-            <div>
-                <label>Address 1:</label>
-                <input type="text" ng-model="shipAddress1" ng-disabled="isSameAsBilling">
-            </div>
-            <div>
-                <label>Address 2:</label>
-                <input type="text" ng-model="shipAddress2" ng-disabled="isSameAsBilling">
-            </div>
-            <div>
-                <label>City:</label>
-                <input type="text" ng-model="shipCity" ng-disabled="isSameAsBilling">
-            </div>
-            <div>
-                <label>State:</label>
-                <input type="text" ng-model="shipState" ng-disabled="isSameAsBilling">
-            </div>
-            <div>
-                <label>Zip:</label>
-                <input type="text" ng-model="shipZip" ng-disabled="isSameAsBilling">
-            </div>
-            <div>
-                <label>Phone:</label>
-                <input type="text" ng-model="shipPhone" ng-disabled="isSameAsBilling">
-            </div>
-        </div>
-    </form>
-    <div class="clear"></div>
     <span ng-controller="scButtonCtrl" ng-class="{button: buttonNormal, buttonHover: isButtonHover, buttonClick: isButtonClick}"
           ng-mouseenter="mouseEnter()" ng-mouseleave="mouseLeave()" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" class="rounded btn">
-        <a ng-click="validateForm($event)">Place Order</a>
+        <a ng-click="validateForm()">Place Order</a>
     </span>
     <!--<span ng-hide="isValidForm" class="rounded buttonDisabled">-->
         <!--Place Order-->

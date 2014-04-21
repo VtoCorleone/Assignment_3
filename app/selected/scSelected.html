@@ -38,16 +38,16 @@
             <div style="margin-top: 10px;">
                 <span>Quantity:</span>
                 <input type="text" maxlength="2" ng-model="quantity" style="width: 20px; margin: 0 10px 0 10px; position: relative; top: -3px;">
-                <span ng-show="!isButtonDisabled" ng-controller="scButtonCtrl" ng-click="addToCart(selectedBoard)" ng-class="{button: buttonNormal, buttonHover: isButtonHover, buttonClick: isButtonClick}"
+                <span ng-controller="scButtonCtrl" ng-click="addToCart(selectedBoard)" ng-class="{button: buttonNormal, buttonHover: isButtonHover, buttonClick: isButtonClick}"
                       ng-mouseenter="mouseEnter()" ng-mouseleave="mouseLeave()" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" class="rounded">
-                    Add to <i class="fa fa-shopping-cart"></i>
-                </span>
-                <span ng-show="isButtonDisabled" class="rounded buttonDisabled">
                     Add to <i class="fa fa-shopping-cart"></i>
                 </span>
             </div>
             <div ng-hide="hasEnoughStock" style="margin-top: 5px;">
                 <span class="right required" style="font-size: 0.6em;">Not enough stock!</span>
+            </div>
+            <div ng-hide="isGreaterThanZero" style="margin-top: 5px;">
+                <span class="right required" style="font-size: 0.6em;">Must be more than 0!</span>
             </div>
         </div>
         <div class="clear"></div>

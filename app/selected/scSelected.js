@@ -17,17 +17,8 @@
 
                         $scope.quantity = 0;
 
-                        $scope.isButtonDisabled = true;
                         $scope.hasEnoughStock = true;
-
-                        $scope.$watch('quantity', function(q){
-                           if (q > 0){
-                               $scope.isButtonDisabled = false;
-                           }
-                           else{
-                               $scope.isButtonDisabled = true;
-                           }
-                        });
+                        $scope.isGreaterThanZero = true;
 
                         scSurfboardSvc.getBySku($stateParams.sku).then(
                             function(data) {
@@ -39,8 +30,14 @@
                         );
 
                         $scope.addToCart = function(board){
-                            scCartSvc.addItems(board, +$scope.quantity);
-                        }
+                            if($scope.quantity > 0 && $scope.hasEnoughStock) {
+                                $scope.isGreaterThanZero = true;
+                                scCartSvc.addItems(board, +$scope.quantity);
+                            }
+                            else if ($scope.quantity < 1){
+                                $scope.isGreaterThanZero = false;
+                            }
+                        };
 
                     }]
                 })
