@@ -51,19 +51,37 @@
         }
 
         var addItems = function(surfboard, quantity){
-            merchandise.push({'surfboard': surfboard, 'quantity': quantity});
+            getSurfCartCookie();
+            var isAdded = false;
+
+            _(merchandise).forEach(function(merch){
+                if (merch.surfboard.sku == surfboard.sku) {
+                    merch.quantity = merch.quantity + quantity;
+                    isAdded = true;
+                    return;
+                }
+            });
+
+            if (!isAdded)
+                merchandise.push({'surfboard': surfboard, 'quantity': quantity});
+
             setSurfCartCookie();
         }
 
         var updateItem = function(surfboard, quantity){
+            var deferred = $q.defer();
+
             getSurfCartCookie();
             _(merchandise).forEach(function(merch){
-                if (merch.surfboard == surfboard) {
+                if (merch.surfboard.sku == surfboard.sku) {
                     merch.quantity = quantity;
                     return;
                 }
             });
             setSurfCartCookie();
+
+            deferred.resolve();
+            return deferred.promise;
         }
 
         var removeItem = function(sku){

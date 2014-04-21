@@ -22,6 +22,7 @@
                             }
                         )
                         $scope.filteredBy = 'Vendor';
+                        $scope.filteredOn = $stateParams.vendorId;
 
                     }]
                 })
@@ -39,7 +40,7 @@
                             }
                         )
                         $scope.filteredBy = 'Category';
-
+                        $scope.filteredOn = $stateParams.categoryId;
                     }]
                 })
 

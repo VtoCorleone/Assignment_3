@@ -1,3 +1,15 @@
-/**
- * Created by shanechapman on 4/15/14.
- */
+'use strict';
+
+(function(){
+
+    angular.module('scSurfShack').controller('scConfirmationCtrl', ['$scope', 'scCheckoutSvc', function($scope, scCheckoutSvc){
+
+        scCheckoutSvc.getOrder().then(function(data){
+
+            $scope.orderDetails = data;
+
+        });
+
+    }]);
+
+})();

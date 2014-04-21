@@ -1,21 +1,18 @@
 <style>
     #selectedContainer{
-        width:80%;
-        margin-right: auto;
-        margin-left: auto;
+        margin-top:45px;
+        /*width:80%;*/
+        /*margin-right: auto;*/
+        /*margin-left: auto;*/
     }
     .selectedImageContainer{
-        min-width: 200px;
-        width: 20%;
-        text-align: center;
+        margin-right:30px;
+        /*min-width: 200px;*/
+        /*width: 20%;*/
     }
     .selectedDescriptionContainer{
         min-width: 200px;
         width: 60%;
-    }
-    .button{
-        border: 1px solid black;
-        padding:0 10px 0 10px;
     }
 </style>
 
@@ -38,25 +35,37 @@
         <div class="right" style="width:100%; text-align: right; font-size: 1.5em;">
             <span>11 in stock!</span>
             <br />
-            <span>Quantity:</span><input type="text" maxlength="2" ng-model="quantity" style="width: 20px; margin: 0 10px 0 10px; position: relative; top: -3px;">
-            <span class="button rounded" ng-click="addToCart(selectedBoard)">Add to <i class="fa fa-shopping-cart"></i></span>
+            <div style="margin-top: 10px;">
+                <span>Quantity:</span>
+                <input type="text" maxlength="2" ng-model="quantity" style="width: 20px; margin: 0 10px 0 10px; position: relative; top: -3px;">
+                <span ng-show="!isButtonDisabled" ng-controller="scButtonCtrl" ng-click="addToCart(selectedBoard)" ng-class="{button: buttonNormal, buttonHover: isButtonHover, buttonClick: isButtonClick}"
+                      ng-mouseenter="mouseEnter()" ng-mouseleave="mouseLeave()" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" class="rounded">
+                    Add to <i class="fa fa-shopping-cart"></i>
+                </span>
+                <span ng-show="isButtonDisabled" class="rounded buttonDisabled">
+                    Add to <i class="fa fa-shopping-cart"></i>
+                </span>
+            </div>
+            <div ng-hide="hasEnoughStock" style="margin-top: 5px;">
+                <span class="right required" style="font-size: 0.6em;">Not enough stock!</span>
+            </div>
         </div>
         <div class="clear"></div>
         <div style="margin: 25px 0 15px 0; line-height: 2.5em;">
             <div>
-                <div style="width: 15%; text-align: right; font-weight: bold;" class="left">
-                    <label style="width: 100px; text-align: right;">Description:</label>
+                <div>
+                    <label>Description:</label>
                 </div>
-                <div style="width: 85%;" class="left">
-                    <span style="padding:0 15px 0 15px; display: block;">{{selectedBoard.description}}</span>
+                <div>
+                    <span>{{selectedBoard.description}}</span>
                 </div>
             </div>
             <div>
-                <div style="width: 15%; text-align: right; font-weight: bold;" class="left">
-                    <label style="width: 100px; text-align: right;">Features:</label>
+                <div>
+                    <label>Features:</label>
                 </div>
-                <div style="width: 85%;" class="left">
-                    <span style="padding:0 15px 0 15px; display: block;">{{selectedBoard.features}}</span>
+                <div>
+                    <span>{{selectedBoard.features}}</span>
                 </div>
             </div>
         </div>

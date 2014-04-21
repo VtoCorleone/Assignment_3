@@ -1,3 +1,18 @@
-/**
- * Created by shanechapman on 4/15/14.
- */
+'use strict';
+
+(function(){
+
+    angular.module('scSurfShack')
+
+        .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+
+            $stateProvider
+
+                .state('confirmation', {
+                    url: '/confirmation',
+                    templateUrl: 'app/confirmation/scConfirmation.html',
+                    controller: 'scConfirmationCtrl'
+                })
+        }]);
+
+})();

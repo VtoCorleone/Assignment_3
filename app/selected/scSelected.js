@@ -17,6 +17,18 @@
 
                         $scope.quantity = 0;
 
+                        $scope.isButtonDisabled = true;
+                        $scope.hasEnoughStock = true;
+
+                        $scope.$watch('quantity', function(q){
+                           if (q > 0){
+                               $scope.isButtonDisabled = false;
+                           }
+                           else{
+                               $scope.isButtonDisabled = true;
+                           }
+                        });
+
                         scSurfboardSvc.getBySku($stateParams.sku).then(
                             function(data) {
                                 $scope.selectedBoard = data[0];

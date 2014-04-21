@@ -12,6 +12,7 @@
     "moment": "~2.5.1",
     "angular-ui-router": "~0.2.10",
     "lodash": "~2.4.1",
-    "angular-cookies": "~1.2.16"
+    "angular-cookies": "~1.2.16",
+    "jquery": "~2.1.0"
   }
 }

@@ -2,34 +2,37 @@
 <html ng-app="scSurfShack">
 <head lang="en">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/site.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Surf Shack</title>
     <style>
-        .left{
-            float: left;
+        html{
+            height: 100%;
+            min-height: 100%;
+            background-color: #B2D1E5;
         }
-        .right{
-            float: right;
+        body{
+            font-size: 1.2em;
+            height: 100%;
+            min-height: 100%;
+
+            background: -webkit-linear-gradient(#FFFFFF, #B2D1E5); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#FFFFFF, #B2D1E5); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#FFFFFF, #B2D1E5); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#FFFFFF, #B2D1E5); /* Standard syntax */
         }
-        .rounded{
-            border-radius: 25px;
-        }
-        .center{
-            margin-left: auto;
-            margin-right:auto;
-        }
-        .clear{
-            clear: both;
-        }
+
         .display{
+            background-color: #FFFFFF;
             min-width: 1000px;
             width: 80%;
-            height: 100%;
+            overflow-y: scroll;
         }
         .filterContainer{
             min-width: 200px;
             width: 20%;
             text-align: center;
+            background-color: #FFFFFF;
         }
         .filterContainer ul{
             list-style-type: none;
@@ -49,49 +52,63 @@
         .contentContainer{
             min-width: 800px;
             width: 80%;
+            background-color: #FFFFFF;
+        }
+        header h3{
+            color: #3C8DC5
+        }
+        nav{
+            width: 100%;
+            height: 15px;
         }
     </style>
 </head>
 <body style="margin:0;">
 
-    <div style="width:100%; height: 45px; background-color: #DDDDDD; margin-bottom: 35px;" ng-controller="scNavCtrl">
-        <a ui-sref="showcase">Surf Shack</a>
-        <div style="margin:6px 25px 0 0; background-color: #FFFFFF; padding: 0 20px 0 20px; color: #AAAAAA;" class="rounded right">
-            <a ui-sref="cart">
+    <nav style="width:100%; height: 55px;" ng-controller="scNavCtrl">
+        <a ui-sref="showcase" style="color: #3C8DC5; font-size: 1.5em; padding: 10px 0 0 10px;">Surf Shack</a>
+        <span style="border: 1px solid #3C8DC5; margin: 20px 60px 0 0;padding: 5px 15px 5px 15px;" class="rounded right">
+            <a ui-sref="cart" style="text-decoration: none; color: #3C8DC5;">
                 <i class="fa fa-shopping-cart fa-2x"></i>
                 &nbsp{{itemsInCart}}
             </a>
-        </div>
-    </div>
+        </span>
+    </nav>
 
-    <div class="display center">
+    <div class="display center rounded">
         <div ng-controller="scFiltersCtrl">
-            <section class="filterContainer left">
-                <span>Vendor</span>
+            <section class="filterContainer left" style="">
+                <header>
+                    <h3>Vendor</h3>
+                </header>
                 <ul>
                     <li ng-repeat="vendor in vendors"><a ui-sref="browse/vendor({vendorId:vendor.vendor})">{{vendor.vendor}}</a></li>
                 </ul>
                 <hr />
-                <span>Category</span>
+                <header>
+                    <h3>Category</h3>
+                </header>
                 <ul>
                     <li ng-repeat="category in categories"><a ui-sref="browse/category({categoryId:category.category})">{{category.category}}</a></li>
                 </ul>
                 <hr />
-                <span>Price</span>
+                <header>
+                    <h3>Price</h3>
+                </header>
                 <ul>
-                    <li>Short board</li>
-                    <li>Long board</li>
-                    <li>Fish</li>
-                    <li>Stand up</li>
+                    <li>$0 - $999</li>
+                    <li>$1000 - $1499</li>
+                    <li>$1500 - $1999</li>
+                    <li>$2000 +</li>
                 </ul>
-                <hr />
             </section>
 
-            <section class="contentContainer left">
+            <section class="contentContainer left" style="">
                 <div ui-view></div>
             </section>
-
         </div>
+        <div class="clear"></div>
+        <div></div>
     </div>
 
     <!--JavaScript libraries-->
@@ -100,6 +117,7 @@
     <script src="libraries/angular-cookies/angular-cookies.min.js"></script>
     <script src="libraries/moment/min/moment.min.js"></script>
     <script src="libraries/lodash/dist/lodash.min.js"></script>
+    <script src="libraries/jquery/dist/jquery.min.js"></script>
 
     <!--App specific JavaScript files-->
     <script src="app/scSurfShackApp.js"></script>
@@ -110,6 +128,7 @@
     <script src="app/browse/scBrowse.js"></script>
     <script src="app/selected/scSelected.js"></script>
     <script src="app/sharedServices/scSurfboardSvc.js"></script>
+    <script src="app/sharedControllers/scButtonCtrl.js"></script>
     <script src="app/filters/scFiltersCtrl.js"></script>
     <script src="app/filters/scFiltersSvc.js"></script>
     <script src="app/checkout/scCheckout.js"></script>

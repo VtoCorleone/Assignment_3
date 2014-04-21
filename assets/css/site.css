@@ -1,0 +1,89 @@
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.rounded{
+    border-radius: 10px;
+}
+.center{
+    margin-left: auto;
+    margin-right:auto;
+}
+.clear{
+    clear: both;
+}
+.tenPercent{
+    width: 10%;
+}
+.twentyPercent{
+    width: 20%;
+}
+.thirtyPercent{
+    width: 30%;
+}
+.fourtyPercent{
+    width: 40%;
+}
+.fiftyPercent{
+    width: 50%;
+}
+.sixtyPercent{
+    width: 60%;
+}
+.seventyPercent{
+    width: 70%;
+}
+.eightyPercent{
+    width: 80%;
+}
+.ninetyPercent{
+    width: 90%;
+}
+.hundredPercent{
+    width: 100%;
+}
+.required{
+    color: red;
+}
+.button{
+    border: 1px solid #3C8DC5;
+    padding:0 10px 0 10px;
+    color: #FFFFFF;
+
+    background: -webkit-linear-gradient(#6FB7E9, #3C8DC5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#6FB7E9, #3C8DC5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#6FB7E9, #3C8DC5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#6FB7E9, #3C8DC5); /* Standard syntax */
+}
+.buttonHover{
+    border: 1px solid #3C8DC5;
+    padding:0 10px 0 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    background: -webkit-linear-gradient(#B2D1E5, #3C8DC5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#B2D1E5, #3C8DC5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#B2D1E5, #3C8DC5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#B2D1E5, #3C8DC5); /* Standard syntax */
+}
+.buttonClick{
+    border: 1px solid #3C8DC5;
+    padding:0 10px 0 10px;
+    color: #FFFFFF;
+    background-color: #3C8DC5;
+    cursor: pointer;
+}
+.buttonDisabled{
+    border: 1px solid gray;
+    padding:0 10px 0 10px;
+    color: #000000;
+    background-color: lightgray;
+}
+
+.btn a{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+}

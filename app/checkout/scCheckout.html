@@ -1,114 +1,168 @@
 <style>
+    header h2{
+        color: #3C8DC5
+    }
+    #checkoutContainer{
+        width: 70%;
+        line-height: 1.5em;
+    }
+    #checkoutContainer header{
+        width: 125px;
+    }
+    #checkoutContainer form input{
+        width: 150px;
+    }
     .creditCard{
         margin-bottom: 25px;
     }
     .creditCard label{
+        text-align: right;
         width: 100px;
         display: inline-block;
+        margin-right: 10px;
     }
     .billingInfo{
+        margin-top: 25px;
 
     }
     .billingInfo label{
+        text-align: right;
         width: 100px;
         display: inline-block;
+        margin-right: 10px;
     }
     .shippingInfo{
-
+        margin-top:25px;
     }
     .shippingInfo label{
+        text-align: right;
         width: 100px;
         display: inline-block;
+        margin-right: 10px;
+    }
+    .placeOrderButton{
+        border: 1px solid black;
+        padding: 7px 20px 7px 20px;
+        margin-top: 20px;
+        width: 90px;
     }
 </style>
-<div>
+<div id="checkoutContainer" class="center">
+    <header>
+        <h2>
+            Checkout
+        </h2>
+    </header>
     <form class="creditCard">
-        <header>Credit Card</header>
-        <div>
-            <label>CC Type:</label>
-            <input type="text" ng-model="ccType">
+        <div class="left">
+            <header>Credit Card</header>
         </div>
-        <div>
-            <label>CC Number:</label>
-            <input type="text" ng-model="ccNumber">
-        </div>
-        <div>
-            <label>Expiration Date:</label>
-            <input type="text" ng-model="ccExpiration">
-        </div>
-        <div>
-            <label>Security Code:</label>
-            <input type="text" ng-model="ccSecurity">
-        </div>
-    </form>
-    <form class="billingInfo left">
-        <header>Billing Info</header>
-        <div>
-            <label>Name:</label>
-            <input type="text" ng-model="billName">
-        </div>
-        <div>
-            <label>Address 1:</label>
-            <input type="text" ng-model="billAddress1">
-        </div>
-        <div>
-            <label>Address 2:</label>
-            <input type="text" ng-model="billAddress2">
-        </div>
-        <div>
-            <label>City:</label>
-            <input type="text" ng-model="billCity">
-        </div>
-        <div>
-            <label>State:</label>
-            <input type="text" ng-model="billState">
-        </div>
-        <div>
-            <label>Zip:</label>
-            <input type="text" ng-model="billZip">
-        </div>
-        <div>
-            <label>Phone:</label>
-            <input type="text" ng-model="billPhone">
+        <div class="left">
+            <div>
+                <label>Type:</label>
+                <input type="text" ng-model="ccType">
+            </div>
+            <div>
+                <label>Name:</label>
+                <input type="text" ng-model="ccName">
+            </div>
+            <div>
+                <label>Number:</label>
+                <input type="text" ng-model="ccNumber">
+            </div>
+            <div>
+                <label>Expiration:</label>
+                <input type="text" ng-model="ccExpiration">
+            </div>
+            <div>
+                <label>CCV:</label>
+                <input type="text" ng-model="ccSecurity">
+            </div>
         </div>
     </form>
+    <div class="clear"></div>
+    <form class="billingInfo">
+        <div class="left">
+            <header>Billing</header>
+        </div>
+        <div class="left">
+            <div>
+                <label>Name:</label>
+                <input type="text" ng-model="billName">
+            </div>
+            <div>
+                <label>Address 1:</label>
+                <input type="text" ng-model="billAddress1">
+            </div>
+            <div>
+                <label>Address 2:</label>
+                <input type="text" ng-model="billAddress2">
+            </div>
+            <div>
+                <label>City:</label>
+                <input type="text" ng-model="billCity">
+            </div>
+            <div>
+                <label>State:</label>
+                <input type="text" ng-model="billState">
+            </div>
+            <div>
+                <label>Zip:</label>
+                <input type="text" ng-model="billZip">
+            </div>
+            <div>
+                <label>Phone:</label>
+                <input type="text" ng-model="billPhone">
+            </div>
+        </div>
+    </form>
+    <div class="clear"></div>
+    <div>
+        <input type="checkbox" ng-checked="isSameAsBilling" ng-click="sameAsBillingClicked()">
+        <label>Shipping is same as billing</label>
+    </div>
     <form class="shippingInfo">
-        <div>
-            <header class="left">Shipping Information</header>
-            <label>Same as billing: </label>
-            <input type="checkbox" ng-checked="isSameAsBilling" ng-click="sameAsBillingClicked()">
+        <div class="left">
+            <header>Shipping</header>
         </div>
-        <div>
-            <label>Name:</label>
-            <input type="text" ng-model="shipName">
-        </div>
-        <div>
-            <label>Address 1:</label>
-            <input type="text" ng-model="shipAddress1">
-        </div>
-        <div>
-            <label>Address 2:</label>
-            <input type="text" ng-model="shipAddress2">
-        </div>
-        <div>
-            <label>City:</label>
-            <input type="text" ng-model="shipCity">
-        </div>
-        <div>
-            <label>State:</label>
-            <input type="text" ng-model="shipState">
-        </div>
-        <div>
-            <label>Zip:</label>
-            <input type="text" ng-model="shipZip">
-        </div>
-        <div>
-            <label>Phone:</label>
-            <input type="text" ng-model="shipPhone">
+        <div class="left">
+            <div>
+                <label>Name:</label>
+                <input type="text" ng-model="shipName" ng-disabled="isSameAsBilling">
+            </div>
+            <div>
+                <label>Address 1:</label>
+                <input type="text" ng-model="shipAddress1" ng-disabled="isSameAsBilling">
+            </div>
+            <div>
+                <label>Address 2:</label>
+                <input type="text" ng-model="shipAddress2" ng-disabled="isSameAsBilling">
+            </div>
+            <div>
+                <label>City:</label>
+                <input type="text" ng-model="shipCity" ng-disabled="isSameAsBilling">
+            </div>
+            <div>
+                <label>State:</label>
+                <input type="text" ng-model="shipState" ng-disabled="isSameAsBilling">
+            </div>
+            <div>
+                <label>Zip:</label>
+                <input type="text" ng-model="shipZip" ng-disabled="isSameAsBilling">
+            </div>
+            <div>
+                <label>Phone:</label>
+                <input type="text" ng-model="shipPhone" ng-disabled="isSameAsBilling">
+            </div>
         </div>
     </form>
-</div>
-<hr />
-<div>
-
+    <div class="clear"></div>
+    <span ng-controller="scButtonCtrl" ng-class="{button: buttonNormal, buttonHover: isButtonHover, buttonClick: isButtonClick}"
+          ng-mouseenter="mouseEnter()" ng-mouseleave="mouseLeave()" ng-mousedown="mouseDown()" ng-mouseup="mouseUp()" class="rounded btn">
+        <a ng-click="validateForm($event)">Place Order</a>
+    </span>
+    <!--<span ng-hide="isValidForm" class="rounded buttonDisabled">-->
+        <!--Place Order-->
+    <!--</span>-->
+    <div style="padding-bottom: 35px;"></div>
 </div>

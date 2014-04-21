@@ -26,4 +26,31 @@
 
     });
 
+//        .run(function($rootScope) {
+//            $rootScope.$on('$stateChangeSuccess', function () {
+//                //alert(screen.height);
+//                $('.filterContainer').height(screen.height - 55);
+//                $('.contentContainer').height(screen.height - 55);
+//            });
+//        });
+
+//        .run(function($rootScope) {
+//            $(function(){
+//                alert(screen.height);
+//                $('.filterContainer').height(screen.height - 55);
+//                $('.contentContainer').height(screen.height - 55)
+//            });
+//
+////            document.onreadystatechange = function () {
+////                if (document.readyState == "complete") {
+////                    debugger;
+////                    var filterContainer = document.getElementsByClassName('filterContainer');
+////                    var contentContainer = document.getElementsByClassName('contentContainer');
+////                    var screenHeight = screen.height;
+////                    filterContainer.style.height = contentContainer.style.height = screenHeight - 55 + 'px';
+////                }
+////            }
+//
+//        });
+
 })();
